@@ -16,7 +16,7 @@ module.exports = function(RED) {
                 endpoint: this.credentials.endpoint,
                 s3ForcePathStyle: true,
                 signatureVersion: 'v4',
-                scheme: this.credentials.scheme
+                sslenabled: this.credentials.sslenabled
             });
         }
     }
@@ -26,7 +26,7 @@ module.exports = function(RED) {
             accesskeyid: { type:"text" },
             secretaccesskey: { type: "password" },
             endpoint: { type: "text" },
-            scheme: { type: "text" }
+            sslenabled: { type: "text" }
         }
     });
 

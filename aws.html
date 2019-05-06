@@ -281,11 +281,8 @@
         <input class="input-append-left" type="text" id="node-config-input-endpoint" style="width: 40%;" >
     </div>
     <div class="form-row">
-        <label for="node-config-input-scheme"><i class="fa fa-bookmark"></i><span data-i18n="aws.label.scheme"></span></label>
-        <select type="text" id="node-config-input-scheme" style="width:40%;">
-            <option selected value="http">HTTP</option>
-            <option value="https">HTTPS</option>
-        </select>
+        <label for="node-config-input-sslenabled"><i class="fa fa-bookmark"></i><span data-i18n="aws.label.sslenabled"></span></label>
+        <input class="input-append-left" type="checkbox" id="node-config-input-sslenabled">
     </div>
     <div class="form-tips">
         <span data-i18n="[html]aws.tip.config1"></span>
@@ -302,7 +299,7 @@
             accesskeyid: {type:"text",required:true},
             secretaccesskey: {type:"password",required:true},
             endpoint: {type:"text",required:true},
-            scheme: {type:"text",required:true},
+            sslenabled: {type:"text",required:true},
         },
         label: function() {
             return this.accesskeyid ? "Minio "+this.accesskeyid : "Minio";

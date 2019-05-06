@@ -4,6 +4,7 @@
             "aws": "AWS",
             "bucket": "Bucket",
             "endpoint": "Endpoint",
+            "sslenabled": "SSL Enabled",
             "pattern": "Filename Pattern",
             "name": "Name",
             "filename": "Filename",
