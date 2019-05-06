@@ -276,6 +276,10 @@
         <label for="node-config-input-secretaccesskey"><i class="fa fa-bookmark"></i><span data-i18n="aws.label.secret"></span></label>
         <input class="input-append-left" type="password" id="node-config-input-secretaccesskey" style="width: 40%;" >
     </div>
+    <div class="form-row">
+        <label for="node-config-input-endpoint"><i class="fa fa-bookmark"></i><span data-i18n="aws.label.endpoint"></span></label>
+        <input class="input-append-left" type="text" id="node-config-input-endpoint" style="width: 40%;" >
+    </div>
     <div class="form-tips">
         <span data-i18n="[html]aws.tip.config1"></span>
         <span data-i18n="[html]aws.tip.config2"></span>
@@ -289,10 +293,11 @@
         defaults: { },
         credentials: {
             accesskeyid: {type:"text",required:true},
-            secretaccesskey: {type: "password",required:true},
+            secretaccesskey: {type:"password",required:true},
+            endpoint: {type:"text",required:true}
         },
         label: function() {
-            return this.accesskeyid ? "AWS "+this.accesskeyid : "AWS";
+            return this.accesskeyid ? "Minio "+this.accesskeyid : "Minio";
         },
         exportable: false,
     });

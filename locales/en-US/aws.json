@@ -3,6 +3,7 @@
         "label": {
             "aws": "AWS",
             "bucket": "Bucket",
+            "endpoint": "Endpoint",
             "pattern": "Filename Pattern",
             "name": "Name",
             "filename": "Filename",
@@ -20,6 +21,7 @@
         },
         "placeholder": {
             "bucket": "bucket name",
+            "endpoint": "Endpoint",
             "pattern": "Filepattern",
             "name": "Name",
             "filename": "Filename",
