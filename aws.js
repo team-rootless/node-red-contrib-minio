@@ -16,7 +16,7 @@ module.exports = function(RED) {
                 endpoint: this.credentials.endpoint,
                 s3ForcePathStyle: true,
                 signatureVersion: 'v4',
-                sslenabled: this.credentials.sslenabled
+                sslEnabled: this.credentials.sslenabled
             });
         }
     }
@@ -44,7 +44,7 @@ module.exports = function(RED) {
             node.warn(RED._("aws.warn.missing-credentials"));
             return;
         }
-        var s3 = new AWS.S3({"region": node.region});
+        var s3 = new AWS.S3();
         node.status({fill:"blue",shape:"dot",text:"aws.status.initializing"});
         s3.listObjects({ Bucket: node.bucket }, function(err, data) {
             if (err) {
