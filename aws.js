@@ -21,7 +21,7 @@ module.exports = function(RED) {
         }
     }
 
-    RED.nodes.registerType("aws-config-s3",AWSNode,{
+    RED.nodes.registerType("minio-config",AWSNode,{
         credentials: {
             accesskeyid: { type:"text" },
             secretaccesskey: { type: "password" },
@@ -128,7 +128,7 @@ module.exports = function(RED) {
             node.warn(RED._("aws.warn.missing-credentials"));
             return;
         }
-        var s3 = new AWS.S3({"region": node.region});
+        var s3 = new AWS.S3();
         node.on("input", function(msg) {
             var format = node.format || msg.format;
             var bucket = node.bucket || msg.bucket;
@@ -186,7 +186,7 @@ module.exports = function(RED) {
             return;
         }
         if (AWS) {
-            var s3 = new AWS.S3({"region": node.region});
+            var s3 = new AWS.S3();
             node.status({fill:"blue",shape:"dot",text:"aws.status.checking-credentials"});
             s3.listObjects({ Bucket: node.bucket }, function(err) {
                 if (err) {
