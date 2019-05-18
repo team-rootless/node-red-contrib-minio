@@ -46,7 +46,7 @@
         category: 'storage-input',
         color:"#f7d591",
         defaults: {
-            aws: {type:"aws-s3-config",required:true},
+            aws: {type:"minio-config",required:true},
             bucket: {required:true},
             region: {value:"", required:true},
             contentType: {value:""},
@@ -119,7 +119,7 @@
         category: 'storage-output',
         color:"#f7d591",
         defaults: {
-            aws: {type:"aws-s3-config",required:true},
+            aws: {type:"minio-config",required:true},
             bucket: {required:true},
             filename: {value:""},
             region: {value:"", required:true},
@@ -229,7 +229,7 @@
         category: 'storage-output',
         color:"#f7d591",
         defaults: {
-            aws: {type:"aws-s3-config",required:true},
+            aws: {type:"minio-config",required:true},
             bucket: {required:true},
             filename: {value:""},
             localFilename: {value:""},
@@ -267,7 +267,7 @@
     });
 </script>
 
-<script type="text/x-red" data-template-name="aws-s3-config">
+<script type="text/x-red" data-template-name="minio-config">
     <div class="form-row">
         <label for="node-config-input-accesskeyid"><i class="fa fa-bookmark"></i><span data-i18n="aws.label.keyid"></span></label>
         <input class="input-append-left" type="text" id="node-config-input-accesskeyid" style="width: 40%;" >
@@ -292,7 +292,7 @@
 
 <script type="text/javascript">
 (function() {
-    RED.nodes.registerType('aws-s3-config',{
+    RED.nodes.registerType('minio-config',{
         category: 'config',
         defaults: { },
         credentials: {

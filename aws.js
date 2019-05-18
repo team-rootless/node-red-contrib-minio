@@ -21,7 +21,7 @@ module.exports = function(RED) {
         }
     }
 
-    RED.nodes.registerType("aws-s3-config",AWSNode,{
+    RED.nodes.registerType("minio-config",AWSNode,{
         credentials: {
             accesskeyid: { type:"text" },
             secretaccesskey: { type: "password" },
