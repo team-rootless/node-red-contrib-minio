@@ -299,7 +299,7 @@
             accesskeyid: {type:"text",required:true},
             secretaccesskey: {type:"password",required:true},
             endpoint: {type:"text",required:true},
-            sslenabled: {type:"text",required:true},
+            sslenabled: {type:"text",required:false},
         },
         label: function() {
             return this.accesskeyid ? "Minio "+this.accesskeyid : "Minio";
