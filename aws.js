@@ -16,7 +16,7 @@ module.exports = function(RED) {
                 endpoint: this.credentials.endpoint,
                 s3ForcePathStyle: true,
                 signatureVersion: 'v4',
-                sslEnabled: this.credentials.sslenabled
+                sslEnabled:  (this.credentials.sslenabled == "true") ? true : false;
             });
         }
     }

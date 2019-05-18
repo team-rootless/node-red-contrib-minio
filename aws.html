@@ -282,7 +282,7 @@
     </div>
     <div class="form-row">
         <label for="node-config-input-sslenabled"><i class="fa fa-bookmark"></i><span data-i18n="aws.label.sslenabled"></span></label>
-        <input class="input-append-left" type="checkbox" id="node-config-input-sslenabled">
+        <input class="input-append-left" type="checkbox" value="false" id="node-config-input-sslenabled">
     </div>
     <div class="form-tips">
         <span data-i18n="[html]aws.tip.config1"></span>
@@ -294,7 +294,9 @@
 (function() {
     RED.nodes.registerType('minio-config',{
         category: 'config',
-        defaults: { },
+        defaults: {
+            "sslenabled": {"value": "false"}
+        },
         credentials: {
             accesskeyid: {type:"text",required:true},
             secretaccesskey: {type:"password",required:true},
