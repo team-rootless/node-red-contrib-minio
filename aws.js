@@ -150,7 +150,6 @@ module.exports = function(RED) {
                 Key: filename,
             }, function(err, data) {
                 if (err) {
-                    node.warn(err);
                     node.error(RED._("aws.error.download-failed",{err:err.toString()}),msg);
                     // set the payload to undefined if there is an error retrieving the requested key.
                     msg.payload = undefined;
